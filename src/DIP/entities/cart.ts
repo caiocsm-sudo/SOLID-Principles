@@ -1,8 +1,9 @@
 import { Discount } from "./discount.ts"
+import { ShoppingCartProtocol } from "./interfaces/cart-protocol.ts";
 
 type Product = { name: string; price: number }
 
-class ShoppingCart {
+class ShoppingCart implements ShoppingCartProtocol {
   private readonly _items: Product[] = []
 
   constructor(private readonly discount: Discount) {}

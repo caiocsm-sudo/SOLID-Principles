@@ -1,17 +1,20 @@
 type OrderStatus = "open" | "closed"
-import ShoppingCart from "./cart.ts"
-import { Messaging } from "../services/messaging.ts"
-import { Persistency } from "../services/persistency.ts"
 
-// High level module
+import { CustomerOrder } from "../../ISP/entities/interfaces/customer-protocol.ts"
+import { ShoppingCartProtocol } from "./interfaces/cart-protocol.ts"
+import { MessagingProtocol } from "./interfaces/messaging-protocol.ts"
+import { PersistencyProtocol } from "./interfaces/persistency-protocol.ts"
+
+// High level modules
 export class Order {
   private _orderStatus: OrderStatus = "open"
 
   constructor(
     // Low level modules
-    private readonly cart: ShoppingCart,
-    private readonly messaging: Messaging,
-    private readonly persistency: Persistency,
+    private readonly cart: ShoppingCartProtocol,
+    private readonly messaging: MessagingProtocol,
+    private readonly persistency: PersistencyProtocol,
+    private readonly customer: CustomerOrder,
   ) {}
 
   get orderStatus(): Readonly<OrderStatus> {
@@ -36,5 +39,7 @@ export class Order {
 
     this.persistency.saveOrder()
     this.cart.clear()
+
+    console.log(this.customer.getName() + " ordered some expensive shit.");
   }
 }

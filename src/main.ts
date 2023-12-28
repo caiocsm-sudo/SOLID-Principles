@@ -12,19 +12,21 @@
     - Abstractions should not depend on details.
 */
 
-import ShoppingCart from "./OCP/entities/cart.ts"
-import { Messaging } from "./SRP/services/messaging.ts"
-import { Order } from "./OCP/entities/order.ts"
-import { Persistency } from "./OCP/services/persistency.ts"
-import { Product } from "./OCP/entities/product.ts"
-import { TenPercentDiscount } from "./OCP/entities/discount.ts"
+import ShoppingCart from "./DIP/entities/cart.ts"
+import { Messaging } from "./DIP/services/messaging.ts"
+import { Order } from "./DIP/entities/order.ts"
+import { Persistency } from "./DIP/services/persistency.ts"
+import { Product } from "./DIP/entities/product.ts"
+import { TenPercentDiscount } from "./DIP/entities/discount.ts"
+import { EnterpriseCustomer } from "./ISP/entities/customer.ts"
 
 const tenPercentDiscount = new TenPercentDiscount()
 const shoppingCart = new ShoppingCart(tenPercentDiscount)
 const messaging = new Messaging()
 const persistency = new Persistency()
+const enterpriseCustomer = new EnterpriseCustomer("Big Mac", "190291093321");
 
-const order = new Order(shoppingCart, messaging, persistency)
+const order = new Order(shoppingCart, messaging, persistency, enterpriseCustomer)
 
 shoppingCart.addItem(new Product("Camisa", 20))
 shoppingCart.addItem(new Product("Galinha", 9.5))
