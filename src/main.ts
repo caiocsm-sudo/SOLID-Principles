@@ -6,9 +6,10 @@
   LSP - Liskov Substitution Principle
     - Because Square is a type of Rectangle, it should be able to replace Rectangle objects without causing any issues
   ISP - Interface Segregation Principle
-    - 
+    - Clients should not depend on methods they don't use
   DIP - Dependency Inversion Principle
-    - 
+    - High-level modules should not import anything from low-level modules. Both should depend on abstractions.
+    - Abstractions should not depend on details.
 */
 
 import ShoppingCart from "./OCP/entities/cart.ts"
