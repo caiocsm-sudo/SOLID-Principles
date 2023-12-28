@@ -1,12 +1,12 @@
-import ShoppingCart from "./SRP copy/entities/cart.ts"
+import ShoppingCart from "./OCP/entities/cart.ts"
 import { Messaging } from "./SRP/services/messaging.ts"
-import { Order } from "./SRP copy/entities/order.ts"
-import { Persistency } from "./SRP copy/services/persistency.ts"
-import { Product } from "./SRP copy/entities/product.ts"
-import { FiftyPercentDiscount } from "./SRP copy/entities/discount.ts"
+import { Order } from "./OCP/entities/order.ts"
+import { Persistency } from "./OCP/services/persistency.ts"
+import { Product } from "./OCP/entities/product.ts"
+import { TenPercentDiscount } from "./OCP/entities/discount.ts"
 
-const fiftyPercentDiscount = new FiftyPercentDiscount();
-const shoppingCart = new ShoppingCart(fiftyPercentDiscount)
+const tenPercentDiscount = new TenPercentDiscount()
+const shoppingCart = new ShoppingCart(tenPercentDiscount)
 const messaging = new Messaging()
 const persistency = new Persistency()
 
