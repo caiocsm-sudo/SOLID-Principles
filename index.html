@@ -4,41 +4,101 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dist/output.css" />
-    <title>Vite + TS</title>
+    <link rel="stylesheet" href="/index.scss" />
+    <title>SOLID</title>
   </head>
-  <body class="bg-stone-50 h-max">
+  <body>
     <div id="app" class="">
-      <header class="py-5 px-12 flex align-center justify-between">
-        <h1 class="subpixel-antialiased text-stone-950 text-2xl">SOLID Principles</h1>
-        <nav>
-          <ul class="flex align-center justify-center gap-x-2">
+      <header class="header">
+        <h1 class="">SOLID Principles</h1>
+        <nav class="header__nav">
+          <ul class="header__nav--ulist">
             <li>
-              <a href="#" class="hover:text-sky-400 transition-all duration-100">SRP</a>
+              <a href="#srp" class="">SRP</a>
             </li>
             <li>
-              <a href="#" class="hover:text-sky-400 transition-all duration-100">OCP</a>
+              <a href="#" class="">OCP</a>
             </li>
             <li>
-              <a href="#" class="hover:text-sky-400 transition-all duration-100">LSP</a>
+              <a href="#" class="">LSP</a>
             </li>
             <li>
-              <a href="#" class="hover:text-sky-400 transition-all duration-100">ISP</a>
+              <a href="#" class="">ISP</a>
             </li>
             <li>
-              <a href="#" class="hover:text-sky-400 transition-all duration-100">DIP</a>
+              <a href="#" class="">DIP</a>
             </li>
           </ul>
         </nav>
       </header>
     </div>
-    <section id="srp" class="px-2 py-2">
-      <header class="text-center text-2xl">
-        <h2 class="text-4xl font-bold my-8">Single Responsability Principle</h2>
-      </header>
-      <article>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, minima nam ea magnam dolorum, sed perferendis beatae ipsam maiores repellendus deserunt veniam similique corporis, ipsum nisi laborum rem. Eveniet, distinctio.</p>
-      </article>
+    <section class="cards">
+      <div id="srp" class="card--default">
+        <header class="card__header">
+          <h2 class="section__title">Single Responsibility Principle</h2>
+        </header>
+        <article class="card__article">
+          <p>
+            The single responsibility principle is a computer programming
+            principle that states that "A module should be responsible to one,
+            and only one, actor." The term actor refers to a group that requires
+            a change in the module.
+          </p>
+        </article>
+      </div>
+      <div id="ocp" class="card--default">
+        <header class="card__header">
+          <h2 class="section__title">Open/Closed Principle</h2>
+        </header>
+        <article class="card__article">
+          <p>
+            In object-oriented programming, the open–closed principle states
+            "software entities should be open for extension, but closed for
+            modification"; that is, such an entity can allow its behaviour to be
+            extended without modifying its source code.
+          </p>
+        </article>
+      </div>
+      <div id="lsp" class="card--default">
+        <header class="card__header">
+          <h2 class="section__title">Liskov Substitution Principle</h2>
+        </header>
+        <article class="card__article">
+          <p>
+            Liskov Substitution Principle states: Let q(x) be a property
+            provable about objects of x of type T. Then q(y) should be provable
+            for objects y of type S where S is a subtype of T. This means that
+            every subclass or derived class should be substitutable for their
+            base or parent class.
+          </p>
+        </article>
+      </div>
+      <div id="isp" class="card--default">
+        <header class="card__header">
+          <h2 class="section__title">Interface Segregation Principle</h2>
+        </header>
+        <article class="card__article">
+          <p>
+            The interface segregation principle (ISP) states that no code should
+            be forced to depend on methods it does not use. ISP splits
+            interfaces that are very large into smaller and more specific ones
+            so that clients will only have to know about the methods that are of
+            interest to them.
+          </p>
+        </article>
+      </div>
+      <div id="dip" class="card--default">
+        <header class="card__header">
+          <h2 class="section__title">Dependency Inversion Principle</h2>
+        </header>
+        <article class="card__article">
+          <p>
+            The principle states: High-level modules should not import anything
+            from low-level modules. Both should depend on abstractions (e.g.,
+            interfaces). Abstractions should not depend on details.
+          </p>
+        </article>
+      </div>
     </section>
     <script type="module" src="/src/main.ts"></script>
   </body>
