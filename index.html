@@ -1,13 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/output.css" />
     <title>Vite + TS</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-stone-50 h-max">
+    <div id="app" class="">
+      <header class="py-5 px-12 flex align-center justify-between">
+        <h1 class="subpixel-antialiased text-stone-950 text-2xl">SOLID Principles</h1>
+        <nav>
+          <ul class="flex align-center justify-center gap-x-2">
+            <li>
+              <a href="#" class="hover:text-sky-400 transition-all duration-100">SRP</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-sky-400 transition-all duration-100">OCP</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-sky-400 transition-all duration-100">LSP</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-sky-400 transition-all duration-100">ISP</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-sky-400 transition-all duration-100">DIP</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <section id="srp" class="px-2 py-2">
+      <header class="text-center text-2xl">
+        <h2 class="text-4xl font-bold my-8">Single Responsability Principle</h2>
+      </header>
+      <article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, minima nam ea magnam dolorum, sed perferendis beatae ipsam maiores repellendus deserunt veniam similique corporis, ipsum nisi laborum rem. Eveniet, distinctio.</p>
+      </article>
+    </section>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
