@@ -1,3 +1,16 @@
+/*
+  SRP - Single Responsibility Principle
+    - A class should have one reason to change/One responsability
+  OCP - Open/Closed Principle
+    - A class should be closed to modification and open for extension
+  LSP - Liskov Substitution Principle
+    - Because Square is a type of Rectangle, it should be able to replace Rectangle objects without causing any issues
+  ISP - Interface Segregation Principle
+    - 
+  DIP - Dependency Inversion Principle
+    - 
+*/
+
 import ShoppingCart from "./OCP/entities/cart.ts"
 import { Messaging } from "./SRP/services/messaging.ts"
 import { Order } from "./OCP/entities/order.ts"
